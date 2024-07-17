@@ -11,3 +11,8 @@ jobs:
         type: 'zip'
         filename: 'release.zip'
         exclusions: '*.git* /*node_modules/* .editorconfig'
+    - name: Commit Archive
+      run: |
+        git add release.zip
+        git commit -m "Add Archive"
+        git push --force
