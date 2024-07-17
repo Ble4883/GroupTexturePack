@@ -22,7 +22,7 @@ jobs:
         git commit -m "Add Archive"
         git push --force
     - name: Upload Release
-      - uses: "marvinpinto/action-automatic-releases@latest"
+      uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
