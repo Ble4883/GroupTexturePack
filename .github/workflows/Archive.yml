@@ -10,7 +10,7 @@ jobs:
       with:
         type: 'zip'
         filename: 'release.zip'
-        exclusions: '*.git* /*node_modules/* .editorconfig'
+        exclusions: '*.git* /*node_modules/* .editorconfig release.zip'
     - name: Commit Archive
       run: |
         git config --global user.email "88404797+Evakhiin@users.noreply.github.com"
@@ -18,8 +18,3 @@ jobs:
         git add release.zip
         git commit -m "Add Archive"
         git push --force
-      - name: Upload Release
-      uses: ncipollo/release-action@v1.12.0
-      with:
-        artifacts: "release.zip"
-        token: ${{ secrets.GITHUB_TOKEN }}
