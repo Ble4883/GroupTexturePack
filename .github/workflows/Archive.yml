@@ -17,4 +17,4 @@ jobs:
         git config --global user.name "Evakhiin"
         git add release.zip
         git commit -m "Add Archive"
-        git push --force super-system
+        git push --force https://github.com/Evakhiin/super-system
